@@ -16,7 +16,7 @@ function Article() {
 
   useEffect(() => {
     setState(initialState);
-    fetch(`/articles/${id}`).then((r) => {
+    fetch(`http://127.0.0.1:5555/articles/${id}`).then((r) => {
       if (r.ok) {
         r.json().then((article) =>
           setState({ article, error: null, status: "resolved" })
